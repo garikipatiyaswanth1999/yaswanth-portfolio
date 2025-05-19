@@ -1,50 +1,94 @@
-body {
-  font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f7fa;
   color: #333;
+  scroll-behavior: smooth;
 }
 
 header {
-  background: #004080;
-  color: white;
-  padding: 20px;
+  background-color: #003366;
+  color: #fff;
+  padding: 20px 0;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 15px;
-  padding: 0;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 0;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
 }
 
 section {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 50px 20px;
+  max-width: 1000px;
   margin: auto;
+  background: #fff;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
-  border-bottom: 2px solid #004080;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #003366;
+  border-bottom: 2px solid #003366;
+  padding-bottom: 5px;
 }
 
-ul li {
+section ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+section ul li {
   margin-bottom: 10px;
 }
 
 footer {
   text-align: center;
-  background: #eee;
   padding: 20px;
+  background-color: #eee;
+  margin-top: 40px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  section {
+    padding: 30px 15px;
+  }
 }
